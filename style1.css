@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-image:url(https://wallpaperset.com/w/full/a/a/0/351735.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.85); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00ffcc; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.logo a:hover {
+    color: #00e6b8;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: color 0.3s, transform 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+}
+.nav-links li a:hover {
+    color: #00ffcc;
+    transform: scale(1.1); 
+    border-bottom: 2px solid #00ffcc; 
+}
+
+.nav-links li:hover .dropdown-content {
+    display: block;
+}
+.cart a { 
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.cart a:hover {
+    color: #00ffcc;
+}
+
+.nav-links li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.85);
+    min-width: 150px;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.nav-links li .dropdown-content a {
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+}
+
+.nav-links li .dropdown-content a:hover {
+    background-color: #00ffcc;
+    color: #000;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 20px;
+}
+
+.search-input {
+    width: 250px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 1rem;
+    transition: width 0.4s ease;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-input:focus {
+    width: 350px;
+}
+
+.search-btn {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    color: #00ffcc;
+}
+.hero{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+}
+.hero-content h1{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.hero-content p{
+font-size: 1.2;
+margin-bottom: 30px;
+}
+.hero-content .btn{
+    padding: 10px 30px;
+    background-color:#00ffcc;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.hero-content .btn:hover {
+    background-color: #008b6e;
+}
+.products-section {
+    padding: 60px 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+.products-section h2 {
+    font-size: 5%;
+    margin-bottom: 40px;
+    color: #00ffcc;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.product-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover;  
+    border-radius: 10px;  
+    transition: transform 0.3s ease; 
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #00ffcc;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.product-card .btn {
+    background-color: #00ffcc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card .btn:hover {
+    background-color: #008b6e;
+}
+
+.about-section {
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00ffcc;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #e0e0e0;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #e0e0e0;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.footer-about, .footer-social {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-about h3, .footer-links h4, .footer-social h4 {
+    color: #00ffcc;
+    margin-bottom: 15px;
+}
+
+
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+    color: #00ffcc;
+}
+
+.footer-bottom {
+    font-size: 0.9rem;
+    color: #999;
+}
